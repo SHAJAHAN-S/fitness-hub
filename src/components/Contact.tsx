@@ -1,4 +1,5 @@
 import { MapPin, Phone, Clock, Mail, Navigation } from "lucide-react";
+import { ContactForm } from "./ContactForm";
 
 const GYM_ADDRESS = "Master Gym Unisex Fitness Centre, Tindivanam, Tamil Nadu, India";
 const MAPS_QUERY = encodeURIComponent(GYM_ADDRESS);
@@ -41,50 +42,7 @@ export function Contact() {
             ))}
           </div>
 
-          <form
-            onSubmit={(e) => {
-              e.preventDefault();
-              alert("Thanks! We'll get back to you shortly.");
-            }}
-            className="p-8 rounded-2xl bg-card border border-border shadow-card"
-          >
-            <h3 className="font-display text-2xl">Get a Free Trial</h3>
-            <p className="text-sm text-muted-foreground mt-1">Fill the form, we'll call you back.</p>
-
-            <div className="mt-6 space-y-4">
-              <input
-                required
-                type="text"
-                placeholder="Your name"
-                className="w-full px-4 py-3 rounded-md bg-input border border-border focus:border-primary focus:outline-none transition-colors"
-              />
-              <input
-                required
-                type="tel"
-                placeholder="Phone number"
-                className="w-full px-4 py-3 rounded-md bg-input border border-border focus:border-primary focus:outline-none transition-colors"
-              />
-              <select
-                className="w-full px-4 py-3 rounded-md bg-input border border-border focus:border-primary focus:outline-none transition-colors"
-              >
-                <option>Interested in: Strength Training</option>
-                <option>Interested in: HIIT & Cardio</option>
-                <option>Interested in: Women's Fitness</option>
-                <option>Interested in: Personal Training</option>
-              </select>
-              <textarea
-                rows={4}
-                placeholder="Message (optional)"
-                className="w-full px-4 py-3 rounded-md bg-input border border-border focus:border-primary focus:outline-none transition-colors resize-none"
-              />
-              <button
-                type="submit"
-                className="w-full bg-gradient-primary text-primary-foreground py-4 rounded-md font-semibold uppercase tracking-wider shadow-glow hover:scale-[1.02] transition-transform"
-              >
-                Book My Free Session
-              </button>
-            </div>
-          </form>
+          <ContactForm />
         </div>
 
         {/* Map */}
