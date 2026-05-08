@@ -1,4 +1,9 @@
-import { MapPin, Phone, Clock, Mail } from "lucide-react";
+import { MapPin, Phone, Clock, Mail, Navigation } from "lucide-react";
+
+const GYM_ADDRESS = "Master Gym Unisex Fitness Centre, Tindivanam, Tamil Nadu, India";
+const MAPS_QUERY = encodeURIComponent(GYM_ADDRESS);
+const MAPS_EMBED_URL = `https://www.google.com/maps?q=${MAPS_QUERY}&output=embed`;
+const MAPS_DIRECTIONS_URL = `https://www.google.com/maps/dir/?api=1&destination=${MAPS_QUERY}`;
 
 export function Contact() {
   return (
@@ -80,6 +85,36 @@ export function Contact() {
               </button>
             </div>
           </form>
+        </div>
+
+        {/* Map */}
+        <div className="mt-12 rounded-2xl overflow-hidden border border-border shadow-card bg-card">
+          <div className="relative aspect-[16/9] sm:aspect-[21/9] w-full">
+            <iframe
+              title="Master Gym location map"
+              src={MAPS_EMBED_URL}
+              className="absolute inset-0 w-full h-full"
+              style={{ border: 0, filter: "invert(0.92) hue-rotate(180deg) saturate(0.7) contrast(0.95)" }}
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              allowFullScreen
+            />
+          </div>
+          <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 p-5 sm:p-6 border-t border-border">
+            <div className="flex items-start gap-3">
+              <MapPin className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
+              <p className="text-sm text-muted-foreground">{GYM_ADDRESS}</p>
+            </div>
+            <a
+              href={MAPS_DIRECTIONS_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center gap-2 bg-gradient-primary text-primary-foreground px-5 py-3 rounded-md font-semibold uppercase tracking-wider text-sm shadow-glow hover:scale-105 transition-transform whitespace-nowrap"
+            >
+              <Navigation className="h-4 w-4" />
+              Get Directions
+            </a>
+          </div>
         </div>
       </div>
     </section>
