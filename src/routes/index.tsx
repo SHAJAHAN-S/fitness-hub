@@ -1,26 +1,34 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { Navbar } from "@/components/Navbar";
+import { Hero } from "@/components/Hero";
+import { About } from "@/components/About";
+import { Programs } from "@/components/Programs";
+import { Pricing } from "@/components/Pricing";
+import { Contact } from "@/components/Contact";
+import { Footer } from "@/components/Footer";
 
 export const Route = createFileRoute("/")({
+  head: () => ({
+    meta: [
+      { title: "Master Gym — Unisex Fitness Centre, Tindivanam" },
+      { name: "description", content: "Tindivanam's premier unisex fitness centre. Strength, HIIT, women's fitness & personal training. Join Master Gym today." },
+      { property: "og:title", content: "Master Gym — Unisex Fitness Centre, Tindivanam" },
+      { property: "og:description", content: "World-class equipment, certified trainers, and a community that pushes you. Join Master Gym Tindivanam." },
+    ],
+  }),
   component: Index,
 });
 
-// IMPORTANT: Replace this placeholder. For sites with multiple pages (About, Services, Contact, etc.),
-// create separate route files (about.tsx, services.tsx, contact.tsx) — don't put all pages in this file.
-function PlaceholderIndex() {
-  return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
-    </div>
-  );
-}
-
 function Index() {
-  return <PlaceholderIndex />;
+  return (
+    <main className="bg-background text-foreground min-h-screen">
+      <Navbar />
+      <Hero />
+      <About />
+      <Programs />
+      <Pricing />
+      <Contact />
+      <Footer />
+    </main>
+  );
 }
