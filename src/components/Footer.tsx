@@ -13,7 +13,8 @@ export function Footer() {
           </span>
         </div>
         <p className="text-sm text-muted-foreground text-center">
-          © {new Date().getFullYear()} Master Gym Unisex Fitness Centre, Tindivanam. All rights reserved.
+          © {new Date().getFullYear()} Master Gym Unisex Fitness Centre, Tindivanam. All rights
+          reserved.
         </p>
         <div className="flex gap-3">
           {[Instagram, Facebook, Youtube].map((Icon, i) => (

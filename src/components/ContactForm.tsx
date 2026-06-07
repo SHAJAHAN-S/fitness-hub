@@ -37,9 +37,7 @@ type FormValues = z.infer<typeof schema>;
 const fieldClass = (hasError: boolean) =>
   cn(
     "w-full px-4 py-3 rounded-md bg-input border focus:outline-none transition-colors",
-    hasError
-      ? "border-destructive focus:border-destructive"
-      : "border-border focus:border-primary"
+    hasError ? "border-destructive focus:border-destructive" : "border-border focus:border-primary",
   );
 
 export function ContactForm() {
@@ -83,8 +81,8 @@ export function ContactForm() {
             </div>
             <h3 className="font-display text-2xl">You're In!</h3>
             <p className="mt-2 text-sm text-muted-foreground max-w-sm mx-auto">
-              Thanks for reaching out. Our team will call you within 24 hours to
-              schedule your free trial session at Master Gym.
+              Thanks for reaching out. Our team will call you within 24 hours to schedule your free
+              trial session at Master Gym.
             </p>
             <button
               onClick={reopen}

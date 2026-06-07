@@ -54,7 +54,9 @@ export function Gallery() {
     <section id="gallery" className="py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-2xl mx-auto">
-          <span className="text-primary font-semibold uppercase tracking-widest text-sm">Gallery</span>
+          <span className="text-primary font-semibold uppercase tracking-widest text-sm">
+            Gallery
+          </span>
           <h2 className="mt-3 font-display text-4xl sm:text-5xl lg:text-6xl">
             Inside <span className="text-gradient">Master Gym</span>
           </h2>
@@ -72,7 +74,7 @@ export function Gallery() {
                 "px-4 py-2 rounded-full text-xs sm:text-sm font-semibold uppercase tracking-wider border transition-all",
                 filter === f
                   ? "bg-gradient-primary text-primary-foreground border-transparent shadow-glow"
-                  : "border-border text-muted-foreground hover:border-primary hover:text-primary"
+                  : "border-border text-muted-foreground hover:border-primary hover:text-primary",
               )}
             >
               {f}
@@ -118,7 +120,10 @@ export function Gallery() {
           aria-modal="true"
         >
           <button
-            onClick={(e) => { e.stopPropagation(); close(); }}
+            onClick={(e) => {
+              e.stopPropagation();
+              close();
+            }}
             className="absolute top-4 right-4 p-3 rounded-full bg-card border border-border hover:border-primary hover:text-primary transition-colors"
             aria-label="Close"
           >
@@ -126,7 +131,10 @@ export function Gallery() {
           </button>
 
           <button
-            onClick={(e) => { e.stopPropagation(); prev(); }}
+            onClick={(e) => {
+              e.stopPropagation();
+              prev();
+            }}
             className="absolute left-2 sm:left-6 p-3 rounded-full bg-card/80 border border-border hover:border-primary hover:text-primary transition-colors"
             aria-label="Previous"
           >
@@ -134,7 +142,10 @@ export function Gallery() {
           </button>
 
           <button
-            onClick={(e) => { e.stopPropagation(); next(); }}
+            onClick={(e) => {
+              e.stopPropagation();
+              next();
+            }}
             className="absolute right-2 sm:right-6 p-3 rounded-full bg-card/80 border border-border hover:border-primary hover:text-primary transition-colors"
             aria-label="Next"
           >

@@ -13,9 +13,17 @@ export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       { title: "Master Gym — Unisex Fitness Centre, Tindivanam" },
-      { name: "description", content: "Tindivanam's premier unisex fitness centre. Strength, HIIT, women's fitness & personal training. Join Master Gym today." },
+      {
+        name: "description",
+        content:
+          "Tindivanam's premier unisex fitness centre. Strength, HIIT, women's fitness & personal training. Join Master Gym today.",
+      },
       { property: "og:title", content: "Master Gym — Unisex Fitness Centre, Tindivanam" },
-      { property: "og:description", content: "World-class equipment, certified trainers, and a community that pushes you. Join Master Gym Tindivanam." },
+      {
+        property: "og:description",
+        content:
+          "World-class equipment, certified trainers, and a community that pushes you. Join Master Gym Tindivanam.",
+      },
     ],
   }),
   component: Index,

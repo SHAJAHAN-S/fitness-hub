@@ -19,20 +19,22 @@ export function About() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <span className="text-primary font-semibold uppercase tracking-widest text-sm">About Us</span>
+            <span className="text-primary font-semibold uppercase tracking-widest text-sm">
+              About Us
+            </span>
             <h2 className="mt-3 font-display text-4xl sm:text-5xl lg:text-6xl leading-tight">
               More Than A Gym.
               <br />
               <span className="text-gradient">A Movement.</span>
             </h2>
             <p className="mt-6 text-muted-foreground text-base sm:text-lg leading-relaxed">
-              At Master Gym Unisex Fitness Centre, Tindivanam, we believe fitness
-              transforms lives. From first-time beginners to seasoned athletes,
-              our space is designed to challenge, support and elevate every member.
+              At Master Gym Unisex Fitness Centre, Tindivanam, we believe fitness transforms lives.
+              From first-time beginners to seasoned athletes, our space is designed to challenge,
+              support and elevate every member.
             </p>
             <p className="mt-4 text-muted-foreground text-base sm:text-lg leading-relaxed">
-              Strength training, cardio, functional fitness and personal coaching
-              — all under one roof, with a vibe you'll feel the moment you walk in.
+              Strength training, cardio, functional fitness and personal coaching — all under one
+              roof, with a vibe you'll feel the moment you walk in.
             </p>
           </motion.div>
 

@@ -34,9 +34,8 @@ export function Hero() {
             Deserve.
           </h1>
           <p className="mt-6 text-base sm:text-lg text-muted-foreground max-w-xl">
-            World-class equipment, certified trainers and a community that pushes
-            you. Train with intensity at Master Gym — built for men &amp; women
-            of every level.
+            World-class equipment, certified trainers and a community that pushes you. Train with
+            intensity at Master Gym — built for men &amp; women of every level.
           </p>
 
           <div className="mt-10 flex flex-col sm:flex-row gap-4">
@@ -63,7 +62,9 @@ export function Hero() {
             ].map((s) => (
               <div key={s.l}>
                 <div className="font-display text-3xl sm:text-4xl text-gradient">{s.v}</div>
-                <div className="text-xs sm:text-sm text-muted-foreground uppercase tracking-wider mt-1">{s.l}</div>
+                <div className="text-xs sm:text-sm text-muted-foreground uppercase tracking-wider mt-1">
+                  {s.l}
+                </div>
               </div>
             ))}
           </div>

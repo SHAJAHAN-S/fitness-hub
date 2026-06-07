@@ -12,7 +12,12 @@ const plans = [
     name: "Quarterly",
     price: "3,000",
     period: "/ 3 months",
-    features: ["Everything in Monthly", "1 PT session / month", "Diet plan", "Body composition check"],
+    features: [
+      "Everything in Monthly",
+      "1 PT session / month",
+      "Diet plan",
+      "Body composition check",
+    ],
     featured: true,
   },
   {
@@ -28,7 +33,9 @@ export function Pricing() {
     <section id="pricing" className="py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-2xl mx-auto">
-          <span className="text-primary font-semibold uppercase tracking-widest text-sm">Membership</span>
+          <span className="text-primary font-semibold uppercase tracking-widest text-sm">
+            Membership
+          </span>
           <h2 className="mt-3 font-display text-4xl sm:text-5xl lg:text-6xl">
             Choose Your <span className="text-gradient">Plan</span>
           </h2>

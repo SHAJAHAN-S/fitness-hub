@@ -11,7 +11,9 @@ export function Contact() {
     <section id="contact" className="py-24 sm:py-32 bg-secondary/30">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-2xl mx-auto">
-          <span className="text-primary font-semibold uppercase tracking-widest text-sm">Visit Us</span>
+          <span className="text-primary font-semibold uppercase tracking-widest text-sm">
+            Visit Us
+          </span>
           <h2 className="mt-3 font-display text-4xl sm:text-5xl lg:text-6xl">
             Ready To <span className="text-gradient">Start?</span>
           </h2>
@@ -23,9 +25,17 @@ export function Contact() {
         <div className="mt-14 grid lg:grid-cols-2 gap-8">
           <div className="space-y-4">
             {[
-              { icon: MapPin, title: "Address", lines: ["Master Gym Unisex Fitness Centre", "Tindivanam, Tamil Nadu, India"] },
+              {
+                icon: MapPin,
+                title: "Address",
+                lines: ["Master Gym Unisex Fitness Centre", "Tindivanam, Tamil Nadu, India"],
+              },
               { icon: Phone, title: "Call Us", lines: ["+91 98765 43210", "+91 98765 43211"] },
-              { icon: Clock, title: "Hours", lines: ["Mon – Sat: 5:00 AM – 10:00 PM", "Sunday: 6:00 AM – 12:00 PM"] },
+              {
+                icon: Clock,
+                title: "Hours",
+                lines: ["Mon – Sat: 5:00 AM – 10:00 PM", "Sunday: 6:00 AM – 12:00 PM"],
+              },
               { icon: Mail, title: "Email", lines: ["info@mastergymtindivanam.com"] },
             ].map((c) => (
               <div key={c.title} className="flex gap-4 p-6 rounded-xl bg-card border border-border">
@@ -35,7 +45,9 @@ export function Contact() {
                 <div>
                   <h3 className="font-display text-lg">{c.title}</h3>
                   {c.lines.map((l) => (
-                    <p key={l} className="text-sm text-muted-foreground">{l}</p>
+                    <p key={l} className="text-sm text-muted-foreground">
+                      {l}
+                    </p>
                   ))}
                 </div>
               </div>
@@ -52,7 +64,10 @@ export function Contact() {
               title="Master Gym location map"
               src={MAPS_EMBED_URL}
               className="absolute inset-0 w-full h-full"
-              style={{ border: 0, filter: "invert(0.92) hue-rotate(180deg) saturate(0.7) contrast(0.95)" }}
+              style={{
+                border: 0,
+                filter: "invert(0.92) hue-rotate(180deg) saturate(0.7) contrast(0.95)",
+              }}
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
               allowFullScreen

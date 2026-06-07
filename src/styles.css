@@ -41,9 +41,9 @@
   --card-foreground: oklch(0.97 0.01 80);
   --popover: oklch(0.17 0.015 25);
   --popover-foreground: oklch(0.97 0.01 80);
-  --primary: oklch(0.65 0.24 28);            /* fiery red-orange */
+  --primary: oklch(0.65 0.24 28); /* fiery red-orange */
   --primary-foreground: oklch(0.99 0.005 80);
-  --primary-glow: oklch(0.74 0.21 50);       /* warm orange glow */
+  --primary-glow: oklch(0.74 0.21 50); /* warm orange glow */
   --secondary: oklch(0.22 0.02 30);
   --secondary-foreground: oklch(0.97 0.01 80);
   --muted: oklch(0.2 0.015 30);
@@ -57,7 +57,12 @@
   --ring: oklch(0.65 0.24 28);
 
   --gradient-primary: linear-gradient(135deg, var(--primary), var(--primary-glow));
-  --gradient-hero: linear-gradient(180deg, oklch(0.13 0.012 25 / 0.4) 0%, oklch(0.13 0.012 25 / 0.85) 70%, var(--background) 100%);
+  --gradient-hero: linear-gradient(
+    180deg,
+    oklch(0.13 0.012 25 / 0.4) 0%,
+    oklch(0.13 0.012 25 / 0.85) 70%,
+    var(--background) 100%
+  );
   --gradient-fade: linear-gradient(180deg, transparent, var(--background));
   --shadow-glow: 0 20px 60px -15px oklch(0.65 0.24 28 / 0.5);
   --shadow-card: 0 10px 40px -10px oklch(0 0 0 / 0.6);
@@ -69,15 +74,22 @@
 }
 
 @layer base {
-  * { border-color: var(--color-border); }
-  html { scroll-behavior: smooth; }
+  * {
+    border-color: var(--color-border);
+  }
+  html {
+    scroll-behavior: smooth;
+  }
   body {
     background-color: var(--color-background);
     color: var(--color-foreground);
     font-family: var(--font-sans);
     -webkit-font-smoothing: antialiased;
   }
-  h1, h2, h3, h4 {
+  h1,
+  h2,
+  h3,
+  h4 {
     font-family: var(--font-display);
     letter-spacing: 0.01em;
     text-transform: uppercase;
